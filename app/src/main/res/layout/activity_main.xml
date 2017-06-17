@@ -20,22 +20,27 @@
         android:textSize="40sp"
         android:id="@+id/txtWelcome" />
     
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This is a long text that is to long to fit in one line of this android activity view"/>
+        android:inputType="textPersonName|textCapWords"
+        android:id="@+id/etUserName"
+        android:hint="The Users preferred Name"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="This is a long text that is to long to fit in one line of this android activity view"/>
 
     <Button
-        android:id="@+id/btnContinue"
+        android:id="@+id/btnEnterUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_continue"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="20dp"
+        android:onClick="onEnterUserName"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The following user just returned to this screen:\n"
+        android:id="@+id/tvReturnMsg"/>
 
 
 </LinearLayout>
